@@ -1,11 +1,15 @@
 /*
-  Arduino Workshops
+  MIT License
   ---
+  Arduino Workshops
   Class #1
   Program purpose: Blinking LED diode
   ---
-  Poznan University of Technology
-  CybAiR Science Club
+  @author: Krzysztof Stezala
+  ---
+  Provided by CybAiR Science Club at 
+  Institute of Control, Robotics and Information Engineering of
+  Poznan University of Technology  
 */
 
 #define LED_PIN 8                     // LED diode pin definition
