@@ -12,12 +12,12 @@
   Poznan University of Technology  
 */
 
-#define RED_CAR 13
-#define YELLOW_CAR 12
-#define GREEN_CAR 11
-#define RED_PED 10
-#define GREEN_PED 9
-#define BUTTON_PED 8
+#define RED_CAR 8
+#define YELLOW_CAR 9
+#define GREEN_CAR 10
+#define RED_PED 11
+#define GREEN_PED 12
+#define BUTTON_PED 13
 
 void setup(){
     pinMode(RED_CAR, OUTPUT);
