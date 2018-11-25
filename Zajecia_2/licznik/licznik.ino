@@ -12,6 +12,9 @@
   Poznan University of Technology  
 */
 #define BAUDRATE 9600
+//int counter = 0;
+//short counter = 0;
+//double counter = 0;
 char counter = 0;
 
 // the setup function runs once when you press reset or power the board
@@ -21,6 +24,8 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  Serial.write(counter);
+  Serial.print(counter);
+  Serial.print(" ");
   counter++;
+  delay(5);
 }
