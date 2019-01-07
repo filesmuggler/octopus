@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:uno",
+    "programmer": "AVRISP mkII",
+    "port": "COM5",
+    "sketch": "Zajecia_4\\mostek_H_diody\\mostek_H_diody.ino"
+}
