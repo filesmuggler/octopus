@@ -1,1 +1,36 @@
 
+#include <Servo.h> 
+
+Servo serwomechanizm;
+
+int pozycja=92;
+int odczytanaWartosc = 0;
+int kierunekObrotu=1;
+int deltaV=0; //zmiana predkosci obrotu
+
+void setup()
+{
+Serial.begin (9600);
+serwomechanizm.attach(9);
+serwomechanizm.write(pozycja);//92 stop
+pinMode(10, INPUT_PULLUP);}
+void loop(){
+odczytanaWartosc=analogRead(A2);
+deltaV=((int)(odczytanaWartosc/30));
+if (digitalRead(10) == LOW)
+{
+kierunekObrotu=kierunekObrotu*(-1);
+delay(50);//zatrzymaj na moment
+}
+
+if(kierunekObrotu==1)
+{
+serwomechanizm.write(92+deltaV);
+
+}
+else if(kierunekObrotu==-1)
+{
+serwomechanizm.write(92-deltaV);
+}
+delay(50); //przy mniejszym delayu ciezko trafic "raz" w przycisk 
+}
