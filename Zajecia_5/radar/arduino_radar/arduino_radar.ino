@@ -13,8 +13,12 @@
 */
 #include <Servo.h>
 
+#define BAUDRATE 9600
 #define TRIG_PIN 10
 #define ECHO_PIN 11
+
+int ledPins[] = { 3, 4, 5, 6, 7 };
+int ledCount = sizeof(ledPins);
 
 long signalDuration = 0;
 int objectDistance = 0;
@@ -25,7 +29,7 @@ void setup(){
     pinMode(TRIG_PIN, OUTPUT);
     pinMode(ECHO_PIN, INPUT);
     
-    Serial.begin(9600);
+    Serial.begin(BAUDRATE);
 
     myServo.attach(12);
 }
@@ -36,6 +40,8 @@ void loop(){
         myServo.write(i);
         delay(30);
         objectDistance = calculate_distance();
+
+        
 
         // Sending data on the serial port 
         // for the Processing software
@@ -67,8 +73,8 @@ int calculate_distance(){
     signalDuration = pulseIn(ECHO_PIN, HIGH); 
 
     // calculate distance according to the producer recommendations
-    int distance = signalDuration * 0.034 / 2;
-    
+    int distance = signalDuration / 58;
+
     return distance;
 
 }
