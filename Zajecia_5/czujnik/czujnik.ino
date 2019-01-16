@@ -91,11 +91,11 @@ void lightUpLed(int range){
         // if the array element's index is less than ledLevel,
         // turn the pin for this element on:
         if (thisLed >= ledLevel) {
-            digitalWrite(ledPins[thisLed], LOW);
+            digitalWrite(ledPins[thisLed], HIGH);
         }
         // turn off all pins higher than the ledLevel:
         else {
-            digitalWrite(ledPins[thisLed], HIGH);
+            digitalWrite(ledPins[thisLed], LOW);
         }
     }
 }
