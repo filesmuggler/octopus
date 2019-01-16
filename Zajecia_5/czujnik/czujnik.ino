@@ -87,10 +87,10 @@ void lightUpLed(int range){
     
     
     // loop over the LED array:
-    for (int thisLed = 0; thisLed < ledCount; thisLed++) {
+    for (int thisLed = 0; thisLed <= ledCount; thisLed++) {
         // if the array element's index is less than ledLevel,
         // turn the pin for this element on:
-        if (thisLed < ledLevel) {
+        if (thisLed >= ledLevel) {
             digitalWrite(ledPins[thisLed], LOW);
         }
         // turn off all pins higher than the ledLevel:
