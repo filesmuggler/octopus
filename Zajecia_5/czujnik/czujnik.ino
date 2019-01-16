@@ -20,6 +20,7 @@
 
 int ledPins[] = { 3, 4, 5, 6, 7 };
 int ledCount = sizeof(ledPins);
+int ledLevel;
  
 void setup() {
 
@@ -75,7 +76,15 @@ void range(int min_range, int max_range) {
 }
 
 void lightUpLed(int range){
-    int ledLevel = map(range, 0, 50, 0, ledCount);
+
+    if(range<50){
+        ledLevel = map(range, 0, 50, 0, ledCount);
+    }
+    else{
+        ledLevel = 0;
+    }
+
+    
     
     // loop over the LED array:
     for (int thisLed = 0; thisLed < ledCount; thisLed++) {
