@@ -17,9 +17,6 @@
 #define TRIG_PIN 10
 #define ECHO_PIN 11
 
-int ledPins[] = { 3, 4, 5, 6, 7 };
-int ledCount = sizeof(ledPins);
-
 long signalDuration = 0;
 int objectDistance = 0;
 

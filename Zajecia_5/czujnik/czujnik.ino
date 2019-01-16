@@ -23,9 +23,10 @@ int ledCount = sizeof(ledPins);
  
 void setup() {
 
-    /* Initialize serial communications */
+    /* Initialize*/
     pinMode(TRIG_PIN, OUTPUT);
     pinMode(ECHO_PIN, INPUT);
+    pinMode(BUZZER_PIN, OUTPUT);
 
     /* Initialize serial communications */
     Serial.begin(BAUDRATE);

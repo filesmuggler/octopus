@@ -1,6 +1,6 @@
 {
     "board": "arduino:avr:uno",
     "programmer": "AVRISP mkII",
-    "port": "COM5",
-    "sketch": "Zajecia_5\\radar\\arduino_radar\\arduino_radar.ino"
+    "port": "COM10",
+    "sketch": "Zajecia_5\\czujnik\\czujnik.ino"
 }
