@@ -39,9 +39,7 @@ void loop(){
     for(int i = 15; i <= 165; i++){
         myServo.write(i);
         delay(30);
-        objectDistance = calculate_distance();
-
-        
+        objectDistance = calculate_distance();    
 
         // Sending data on the serial port 
         // for the Processing software
