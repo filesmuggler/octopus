@@ -18,9 +18,9 @@
 #define ECHO_PIN 11
 #define BUZZER_PIN 2
 
-int ledPins[] = { 3, 4, 5, 6, 7 };
-int ledCount = sizeof(ledPins);
-int ledLevel;
+int ledPins[] = { 5, 6, 7 };
+int ledCount = 3;
+int ledLevel = 0;
  
 void setup() {
 
@@ -41,7 +41,7 @@ void setup() {
  
 void loop() {  
     range(20, 50);
-    delay(100);
+    delay(500);
 } 
  
 int getDistance() {
@@ -59,7 +59,7 @@ int getDistance() {
 
     /* calculating the distance */
     distance = pulseTime / 58;
-
+    Serial.println(distance);
     return distance;
 }
 
